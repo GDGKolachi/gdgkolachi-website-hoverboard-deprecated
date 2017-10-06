@@ -7,38 +7,30 @@
 <dom-module id="shared-styles">
   <template>
     <style>
-      :root {
+       :root {
         /* Generate theme at https://www.materialpalette.com */
-
         /* Primary colors */
-        --dark-primary-color:       #F57C00;
-        --default-primary-color:    #FF9800;
-        --light-primary-color:      #FFE0B2;
-        --text-primary-color:       #212121; /* text / icons */
-
+        --dark-primary-color: #F57C00;
+        --default-primary-color: #FF9800;
+        --light-primary-color: #FFE0B2;
+        --text-primary-color: #212121;
+        /* text / icons */
         /* Accent colors */
-        --accent-color:             #03A9F4;
-        --disabled-accent-color:    #4dcfff;
-
+        --accent-color: #03A9F4;
+        --disabled-accent-color: #4dcfff;
         /* Background colors */
-        --primary-background-color:   #FFE0B2;
-
+        --primary-background-color: #FFE0B2;
         /* Text colors */
-        --primary-text-color:       #212121;
-        --secondary-text-color:     #727272;
-        --disabled-text-color:      #BDBDBD;
-
+        --primary-text-color: #212121;
+        --secondary-text-color: #727272;
+        --disabled-text-color: #BDBDBD;
         /* Other colors */
-        --divider-color:            #B6B6B6;
-
+        --divider-color: #B6B6B6;
         /* --- End of replace section --- */
-
         --secondary-background-color: #FFFFFF;
-
         /* Footer */
-        --footer-background-color:    #fcfcfc;
-        --footer-text-color:          #757575;
-
+        --footer-background-color: #fcfcfc;
+        --footer-text-color: #757575;
         /* Tags colors */
         --general: #bdbdbd;
         --android: #78c257;
@@ -165,6 +157,7 @@
         margin: 0;
         min-height: 100vh;
       }
+
       body,
       .markdown-html {
         font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -289,7 +282,8 @@
 
         --paper-dialog-scrollable: {
           padding: 0;
-        };
+        }
+        ;
       }
 
       .scrollable {
@@ -313,7 +307,8 @@
         --paper-tab-ink: currentcolor;
         --paper-tab-content: {
           opacity: 1 !important;
-        };
+        }
+        ;
       }
 
       paper-tab[link] {
@@ -326,8 +321,9 @@
 
       paper-dialog {
         color: inherit;
-        --paper-font-title: {
-        }; /* nuke paper-dialog's styling */
+        --paper-font-title: {}
+        ;
+        /* nuke paper-dialog's styling */
       }
     </style>
   </template>

@@ -30,7 +30,11 @@
   },
   "dateFormat": {
     "locale": "en-US",
-    "blog": {"month": "short", "day": "numeric", "year": "numeric"}
+    "blog": {
+      "month": "short",
+      "day": "numeric",
+      "year": "numeric"
+    }
   },
   "hashtag": "dfua",
   "disqusShortName": "hoverboard-gdg-x",
