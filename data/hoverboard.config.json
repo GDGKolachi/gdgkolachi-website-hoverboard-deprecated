@@ -7,13 +7,13 @@
     "dev": "UA-43643469-9"
   },
   "organizer": {
-    "name": "GDG Karachi (Nawazish)",
-    "twitter": "gdgkhi"
+    "name": "GDG Lviv",
+    "twitter": "gdglviv"
   },
   "webapp": {
     "shortName": "DevFest",
-    "themeColor": "#3498DB",
-    "backgroundColor": "#5499C7"
+    "themeColor": "#F57C00",
+    "backgroundColor": "#F57C00"
   },
   "firebase": {
     "name": "fir-hoverboard-for-gdg",
@@ -120,7 +120,7 @@
     "home": {
       "title": "Home",
       "headerSettings": {
-        "backgroundColor": "#7d53fe",
+        "backgroundColor": "#FF9800",
         "backgroundImage": "/images/backgrounds/home.png",
         "fontColor": "#fff",
         "tabBarColor": "#fff",
