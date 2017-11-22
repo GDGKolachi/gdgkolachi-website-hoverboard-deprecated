@@ -159,6 +159,14 @@
       .speaker-title {
         font-size: 13px;
       }
+
+      .speaker-photo {
+        width:30px;
+        height:30px;
+        z-index: 2;
+        border-radius: 30px;
+      }
+
     </style>
 
     <a
@@ -231,7 +239,10 @@
 
             <template is="dom-repeat" items="[[session.speakers]]" as="speaker">
               <div class="speaker" layout horizontal center>
-                <iron-icon icon="account"></iron-icon>
+                <iron-image
+                  class="speaker-photo"
+                  sizing="contain"
+                  src="[[speaker.photoUrl]]"></iron-image>
                 <div class="person-detail" flex>
                   <span class="speaker-name">[[speaker.name]]</span>
                   <div class="speaker-title">[[speaker.company]] / [[speaker.country]]</div>
