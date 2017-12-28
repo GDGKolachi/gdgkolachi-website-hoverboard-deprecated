@@ -121,7 +121,7 @@ const sessionsReducer = (state = initialState.sessions, action) => {
 const eventsReducer = (state = initialState.events, action) => {
   switch (action.type) {
     case FETCH_EVENTS:
-      return action.data;
+      return state = action.events;
     default:
       return state;
   }

@@ -65,7 +65,7 @@
   </template>
 
   <script>
-    class EventsPage extends Polymer.Element {
+    class EventsPage extends UtilsFunctions(ReduxMixin(Polymer.Element)) {
       static get is() {
         return 'events-page'
       }
@@ -74,7 +74,8 @@
       static get properties() {
         return {
           events: {
-            type: Object
+            type: Array,
+            statePath: 'events'
           },
           schedule: {
             type: Object,
@@ -87,26 +88,10 @@
         }
       }
 
-      constructor() {
-        super();
-        this.fetchEvents();
-      }
-
-      fetchEvents() {
-        const result = new Promise(resolve => {
-          firebase.database()
-            .ref('/events')
-            .on('value', snapshot => {
-              resolve(snapshot.val());
-            })
-        });
-
-        result
-          .then(list => {
-            list.sort((eventOne, eventTwo) => new Date(eventTwo.startDate).getDate() - new Date(eventOne.startDate).getDate());
-            this.events = list;
-          });
-      }
+      connectedCallback() {
+          super.connectedCallback();
+          if (!this.events.length) eventActions.fetchEvents();
+        }
     }
 
     window.customElements.define(EventsPage.is, EventsPage);
