@@ -245,15 +245,8 @@ const sessionsActions = {
   }
 };
 
-const eventsActions = {
+const eventActions = {
   fetchEvents: () => {
-    // const result = firebase.database()
-    //   .ref(`/events`)
-    //   .on('value', snapshot => {
-    //     console.log(snapshot.val());
-    //     store.dispatch({type: FETCH_EVENTS, list: snapshot.val()});
-    //   })
-
     const result = new Promise(resolve => {
       firebase.database()
         .ref('/events')
@@ -263,13 +256,14 @@ const eventsActions = {
     });
 
     result
-      .then(list => {
-        //console.log(list);
+      .then(events => {
+        events.sort((eventOne, eventTwo) => new Date(eventTwo.startDate).getDate() - new Date(eventOne.startDate).getDate());
         store.dispatch({
           type: FETCH_EVENTS,
-          list
+          events
         });
       });
+    return result;
   }
 }
 
